@@ -1,0 +1,103 @@
+.item {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5% 13% 1fr 6%;
+    grid-column-gap: 0.5rem;
+    align-items: center;
+    padding: 0.625rem 0.75rem;
+    background-color: white;
+    cursor: pointer;
+    &:hover {
+        box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+    }
+    &__left-buttons {
+        display: flex;
+        align-items: center;
+        input {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-right: 0.625rem;
+            opacity: 0.5;
+            cursor: pointer;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        button {
+            width: 1.5rem;
+            height: 1.5rem;
+            opacity: 0.5;
+            border: none;
+            background: none;
+            cursor: pointer;
+            svg {
+                height: 100%;
+                width: 100%; 
+            }
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    &__author {
+        font-size: .875rem;
+        font-weight: 700;
+        line-height: 1rem;
+        letter-spacing: .2px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__content {
+        font-size: .875rem;
+        font-weight: 700;
+        line-height: 1rem;
+        letter-spacing: .2px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        span {
+            color: #5f6368;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+    }
+    &__date {
+        color: #5f6368;
+        font-size: .75rem;
+        letter-spacing: .3px;
+        line-height: 1.25rem;
+        text-align: right;
+    }
+    &__right-buttons {
+        position: absolute;
+        right: 0.75rem;
+        display: none;
+        align-items: center;
+        background: inherit;
+        button {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-left: 0.625rem;
+            opacity: 0.5;
+            border: none;
+            background: none;
+            cursor: pointer;
+            svg {
+                height: 100%;
+                width: 100%; 
+            }
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    &:hover {
+        .item__right-buttons {
+            display: flex;
+        }
+    }
+}
+
+.read {
+    font-weight: 400;
+}

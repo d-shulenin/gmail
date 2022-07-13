@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+$breakpoints: (
+    0: 1920px,
+    1: 1860px,
+    2: 1800px,
+    3: 1740px,
+    4: 1680px,
+    5: 1620px,
+    6: 1560px,
+    7: 1500px,
+    8: 1440px,
+    9: 1380px,
+    10: 1320px,
+    11: 1260px,
+    12: 1200px,
+    13: 1140px,
+    14: 1080px,
+    15: 1020px,
+    16: 960px,
+    17: 900px,
+    18: 840px,
+    19: 780px,
+    20: 720px,
+    21: 660px,
+    22: 600px,
+);
+
+@each $breakpoint, $width in $breakpoints {
+    @media screen and (max-width: $width) {
+        html {
+            font-size: calc(20px - #{0.5*$breakpoint+'px'});
+        }
+    }
+}

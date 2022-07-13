@@ -1,0 +1,43 @@
+.input {
+    position: relative;
+    margin-top: 1.5rem;
+    &:first-child {
+        margin-top: 2rem;
+    }
+    span {
+        position: absolute;
+        left: 1rem;
+        top: .75rem;
+        padding: 0 4px;
+        color: #202124;
+        background: white;
+        font-size: 1rem;
+        font-weight: 400;
+        transform: translate(0, 0);
+        transform-origin: 0 0;
+        transition: transform 120ms ease-in;
+        pointer-events: none;
+    }
+    input {
+        border: 1px solid #dadce0;
+        border-radius: 0.25rem;
+        color: #202124;
+        font-size: 1rem;
+        font-weight: 400;
+        padding: .75rem 1rem;
+        &:focus {
+            border: 2px solid #4285f4;
+            outline: none;
+            & + span {
+                transform: translate(-0.4rem, -1.15rem) scale(.75);
+                color: #4285f4;
+            }
+        }    
+    }
+    p {
+        color: #d93025;
+        font-size: 0.75rem;
+        margin-top: 0.25rem;
+        align-self: flex-start;
+    }
+}
